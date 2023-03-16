@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      h1 {
+        color: #16a34a;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>1. What is different on map, filter, forEach, find</h1>
+    <p>
+      map, filter, find, and forEach are all array methods in JavaScript that
+      are used to manipulate arrays. However, they each have different purposes
+      and functions.
+    </p>
+    <b>1.</b>
+    <span>
+      map method creates a new array with the results of calling a provided
+      function on every element in the original array. It returns a new array of
+      the same length as the original array.
+    </span>
+    <br />
+    <br />
+    <b>2.</b>
+    <span>
+      filter method creates a new array with all elements that pass the test
+      implemented by the provided function. It returns a new array with only the
+      elements that satisfy the condition.
+    </span>
+    <br />
+    <br />
+    <b>3.</b>
+    <span>
+      find method returns the value of the first element in the array that
+      satisfies the provided testing function. It returns only the first element
+      that satisfies the condition, and if none is found, it returns undefined.
+    </span>
+    <br />
+    <br />
+    <b>4.</b>
+    <span>
+      forEach method executes a provided function once for each array element.
+      It doesn't return anything and simply executes the provided function on
+      each element in the array.
+    </span>
+    <br />
+    <br />
+
+    <!-- ========================================================== -->
+    <h1>2. What is different on localStorage, sessionStorage, cookies</h1>
+    <span
+      >localStorage, sessionStorage, and cookies are all mechanisms in web
+      browsers that are used to store data locally on the client-side. However,
+      they differ in terms of their storage capacity, expiration, and
+      accessibility.</span
+    >
+    <br />
+    <b>1.</b>
+    <span>
+      localStorage: localStorage is a key-value storage mechanism that allows
+      web developers to store data on the client-side that persists even after
+      the user closes the browser. The data stored in localStorage can be
+      accessed by any page from the same domain. The storage capacity of
+      localStorage is typically larger than that of cookies and sessionStorage,
+      with a limit of around 5-10 MB per domain.
+    </span>
+    <br />
+    <br />
+    <b>2.</b>
+    <span>
+      sessionStorage: sessionStorage is also a key-value storage mechanism that
+      stores data on the client-side, but the data is only available for the
+      duration of the browser session. When the user closes the browser or the
+      session ends, the data stored in sessionStorage is deleted. Like
+      localStorage, the data stored in sessionStorage
+    </span>
+    <br />
+    <br />
+    <b>3.</b>
+    <span>
+      Cookies: Cookies are small pieces of data that are stored on the
+      client-side and are sent to the server with each request. Unlike
+      localStorage and sessionStorage, cookies can be used to store data for any
+      website and are not limited to a specific domain. The storage capacity of
+      cookies is generally limited to 4KB per cookie, and they can be set to
+      expire after a specific time period.
+    </span>
+    <span>
+      In summary, localStorage and sessionStorage are used to store data locally
+      on the client-side, while cookies are used to store data that can be
+      accessed by both the client-side and server-side. localStorage provides
+      persistent storage that persists even after the browser is closed,
+      sessionStorage provides storage for the duration of a browser session, and
+      cookies have limited storage capacity and can be set to expire after a
+      specific time period.
+    </span>
+    <!-- ========================================================== -->
+    <h1>3.what is event loop? and how to work it on js?</h1>
+    <p>
+      ইভেন্ট লুপ হচ্ছে জাভাস্ক্রিপ্টের একটি রানটাইম মডেল, যার মাধ্যমে
+      জাভাস্ক্রিপ্টের কোড চালানো, ইভেন্ট সংগ্রহ ও প্রক্রিয়াকরণ এবং সারিবদ্ধ
+      সাব-টাস্কগুলি চালে।
+    </p>
+    <p>
+      In JavaScript, an event loop is a mechanism that enables asynchronous
+      execution of code. The event loop constantly checks the queue for any new
+      events, and if there are any, it executes them one by one in a loop.
+    </p>
+    <p>
+      To work with the event loop in JavaScript, you can use the setTimeout()
+      and setInterval() functions. Here's a basic example of how you can use
+      them:
+    </p>
+    <code>
+      <b>
+        // Define a function that will be executed after a certain time period
+        function myFunction() { console.log("Hello world!"); } // Call the
+        function after 2 seconds setTimeout(myFunction, 2000); // Define a
+        function that will be executed repeatedly after a certain time period
+        function myRepeatedFunction() { console.log("Hello again!"); } // Call
+        the function every 1 second setInterval(myRepeatedFunction, 1000);</b
+      >
+    </code>
+    <p>
+      In this example, setTimeout() is used to execute the myFunction() function
+      after a delay of 2 seconds. setInterval() is used to execute the
+      myRepeatedFunction() function every 1 second.
+    </p>
+    <p>
+      In this example, setTimeout() is used to execute the myFunction() function
+      after a delay of 2 seconds. setInterval() is used to execute the
+      myRepeatedFunction() function every 1 second.
+    </p>
+    <p>
+      Note that when working with the event loop, it's important to avoid
+      blocking the loop with long-running tasks. Instead, you should use
+      asynchronous APIs and callbacks to ensure that the loop remains
+      responsive.
+    </p>
+    <h1>quizTimer নামক ফাঙ্কশনটি উদ্দেশ কি ?</h1>
+    <p>
+      quizTimer নামক ফাঙ্কশনটি একটি dismissনামক ফেরোমিটার নিয়েছে। ফাংশনের
+      উদ্দেশ্য হল একটি কুইজ পৃষ্ঠায় টাইমার প্রদর্শন আপডেট করা। dismiss
+      পারমিটারটি সত্য হলে, ফাংশন clearInterval ব্যবহার করে টাইমার ক্লিয়ার করে।
+    </p>
+
+    <p>
+      যদি dismiss মিথ্যা বা (undefined) হলে, ফাংশন setInterval ব্যবহার করে একটি
+      টাইমার ব্যবধান সেট করেছে । ব্যবধান প্রতি 1000 মিলিসেকেন্ডে একটি কলব্যাক
+      ফাংশন চালায়।
+    </p>
+
+    <p>কলব্যাক ফাংশন নিম্নলিখিত ক্রিয়া সম্পাদন করে:</p>
+
+    <p>
+      এটি document.querySelector ব্যবহার করে আইডি "count" সহ HTML উপাদান
+      পুনরুদ্ধার করে।
+    </p>
+    <p>
+      এটি একটি global variable গণনার উপর ভিত্তি করে টাইমার শুরু হওয়ার পর থেকে
+      অতিবাহিত হওয়া মিনিট এবং সেকেন্ডের সংখ্যা গণনা করে। টারনারি অপারেটর
+      ব্যবহার করে মিনিট এবং সেকেন্ডগুলি শূন্য দিয়ে ফরম্যাট করা হয়েছে।
+    </p>
+
+    <p>
+      এটি টেমপ্লেট লিটারেল ব্যবহার করে সাবস্ক্রিপ্টে ফর্ম্যাট করা সময় এবং
+      "second" শব্দটি প্রদর্শন করতে "count" উপাদানের HTML আপডেট করে।
+    </p>
+
+    <p>
+      এটি অতিবাহিত সময়ের ট্র্যাক রাখতে গণনা পরিবর্তনশীলকে বৃদ্ধি করে। 60
+      সেকেন্ডের বেশি সময় অতিবাহিত হলে, এটি text-red-300 এবং text-red-700 class
+      নামে "count" উপাদানে পাঠ্যের রঙ পরিবর্তন করে।
+    </p>
+
+    <p>
+      মূল কথা, ফাংশনটি প্রতি সেকেন্ডে একটি ক্যুইজ পৃষ্ঠায় একটি টাইমার প্রদর্শন
+      আপডেট করার জন্য এবং 60 সেকেন্ড অতিবাহিত হওয়ার পরে প্রদর্শনের রঙ পরিবর্তন
+      করার জন্য ডিজাইন করা হয়েছে। কুইজ সম্পূর্ণ হলে বা অন্যথায় বরখাস্ত করার
+      সময় ফাংশনটি বন্ধ করার অনুমতি দেওয়ার জন্য খারিজ প্যারামিটার ব্যবহার করা
+      হয়।
+    </p>
+    <h1>chooseQuiz নামক ফাঙ্কশনটির উদ্দেশ কি ?</h1>
+    <p>chooseQuiz নামক ফাঙ্কশনটির উদ্দেশ হলো।</p>
+    <p>
+      এই ফাঙ্কশনটি ২টি পারমিটের নিয়েছে(index, givenAns)। ফাংশনটি প্রথমে find
+      মেথড ইউস করে পরীক্ষা করে যে বর্তমান কুইজ প্রশ্নের মতো একই আইডি সহ answers
+      অ্যারেতে ইতিমধ্যেই বিদ্যমান কিনা।
+    </p>
+    <p>
+      answers অ্যারেতে একই আইডি সহ একটি answers উপস্থিত থাকলে, ফাংশনটি answers
+      অ্যারের মাধ্যমে পুনরাবৃত্তি করার জন্য একটি for...of লুপ ব্যবহার করে নতুন
+      প্রদত্ত Ans মান দিয়ে আপডেট করে যতক্ষণ না এটি ম্যাচিং আইডির সাথে বস্তুটিকে
+      খুঁজে পায় এবং তারপর ব্যবহার করে বর্তমান কুইজ প্রশ্ন অবজেক্টের মতো একই
+      বৈশিষ্ট্য রয়েছে এমন একটি নতুন বস্তু দিয়ে সেই বস্তুটিকে প্রতিস্থাপন করার
+      জন্য splice মেথড, কিন্তু প্রদত্ত Ans মান যুক্ত করা করে। অবশেষে, ফাংশনটি
+      একটি displayAnswers ফাংশনকে কল করে এবং answers অ্যারেতে পাস করে, আপডেট করা
+      উত্তরগুলির সাথে প্রদর্শন আপডেট করতে।
+    </p>
+    <p>
+      মূল কথা, এই ফাংশনটি একটি বৃহত্তর প্রোগ্রামের অংশ বলে মনে হয় যা
+      ব্যবহারকারীদের একটি কুইজ বা সমীক্ষা করতে দেয় এবং পরবর্তী প্রদর্শন বা
+      বিশ্লেষণের জন্য তাদের উত্তরগুলি একটি অ্যারেতে সংরক্ষণ করে।
+    </p>
+  </body>
+</html>
